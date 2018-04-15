@@ -124,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL=reverse_lazy("cliente:index_cliente")
+LOGIN_REDIRECT_URL=reverse_lazy("reportes:index_reporte")
 LOGOUT_REDIRECT_URL=reverse_lazy("login")
 
 STATICFILES_DIRS=(os.path.join(BASE_DIR, "static"),)
