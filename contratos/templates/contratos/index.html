@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+  {% for contrato in object_list %}
+    {% include "contratos/partials/contrato.html" %}
+  {% endfor %}
+{% endblock %}
