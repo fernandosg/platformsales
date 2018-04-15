@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-  {% for reporte in object_list %}
-    {% include "reportes/partials/reporte.html" %}
-  {% endfor %}
+  <section class="col-lg-12">
+    <h2>Reportes del servidor</h2>
+    {% for reporte in object_list %}
+      <div class="card border-primary mb-3">
+        <div class="card-header">{{reporte.created_at}}</div>
+        <div class="card-body">
+          <h4 class="card-title">{{reporte.estado}}</h4>
+          <p class="card-text">{{reporte.mensaje}}</p>
+          <p>
+            <a href="{% url 'reportes:editar_reporte' pk=reporte.id %}" class="btn btn-primary">Editar</a>
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
 {% endblock %}
