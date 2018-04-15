@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from puntoenlace.views import Crear
+from puntoenlace.views import (IndexView,Crear,EditarView)
 from django.contrib.auth.decorators import login_required
 app_name="puntoenlace"
 urlpatterns = [
-    path('crear/', login_required(Crear.as_view()),name="crear_puntoenlnace")
+    path("",login_required(IndexView.as_view()),name="index_puntoenlace"),
+    path('crear/', login_required(Crear.as_view()),name="crear_puntoenlnace"),
+    path('editar/<pk>/', login_required(EditarView.as_view()),name="editar_puntoenlnace")
 ]

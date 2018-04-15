@@ -6,7 +6,7 @@
       <div class="card border-primary mb-3">
         <div class="card-header">{{reporte.created_at}}</div>
         <div class="card-body">
-          <h4 class="card-title">{{reporte.estado}}</h4>
+          <h4 class="card-title">Este reporte {% if reporte.estado %} se ha solucionado. {% else %} esta en revisión para su solución {% endif %}</h4>
           <p class="card-text">{{reporte.mensaje}}</p>
           <p>
             <a href="{% url 'reportes:editar_reporte' pk=reporte.id %}" class="btn btn-primary">Editar</a>
