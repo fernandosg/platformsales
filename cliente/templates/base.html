@@ -26,7 +26,7 @@
              <a href="{% url 'contratos:index_contrato' %}" class="nav-link">Contratos</a>
            </li>
            <li class="nav-item">
-             <a href="" class="nav-link">Punto Enlaces</a>
+             <a href="{% url 'puntoenlace:index_puntoenlace'%}" class="nav-link">Punto Enlaces</a>
            </li>
          {% endif %}
           {% if request.user.is_authenticated %}
