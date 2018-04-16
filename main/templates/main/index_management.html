@@ -1,0 +1,24 @@
+<section class="col-lg-12">
+  <h2>Bienvenido</h2>
+  <h3>Clientes faltantes a pagar</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contrato in contratos %}
+        <tr>
+          <td>{{contrato.cliente.nombre}}</td>
+          <td>{{contrato.cliente.apellido_paterno}}</td>
+          <td>{{contrato.cliente.apellido_materno}}</td>
+          <td><a href="{% url 'cliente:detalle_cliente' pk=contrato.cliente.id %}" class="btn btn-primary">Ver datos del cliente</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

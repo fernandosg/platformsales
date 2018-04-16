@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import (login,logout,logout_then_login)
-
+from django.contrib.auth.decorators import login_required
+from main.views import IndexView
 urlpatterns = [
+    path("",login_required(IndexView.as_view()),name="main_index"),
     path("accounts/login/",login,{"template_name":"login.html"},name="login"),
     path("logout/",logout_then_login,name="logout"),
     path('admin/', admin.site.urls),
