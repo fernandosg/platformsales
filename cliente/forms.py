@@ -6,4 +6,4 @@ class RegisterCliente(forms.ModelForm):
 
     class Meta():
         model=Cliente
-        fields=["nombre","apellido_paterno","apellido_materno","correo","telefono","contrasena","fecha_instalacion","is_activo","departamento","puntoenlace"]
+        fields=["nombre","apellido_paterno","apellido_materno","correo","telefono","fecha_instalacion","is_activo","departamento","puntoenlace","user"]
