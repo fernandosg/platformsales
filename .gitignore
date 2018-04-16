@@ -1,7 +1,7 @@
 db.sqlite3
-cliente/__pycache__
-contratos/__pycache__
-main/__pycache__
-platformciber/__pycache__
-puntoenlace/__pycache__
-reportes/__pycache__
+cliente/__pycache__/
+contratos/__pycache__/
+main/__pycache__/
+platformciber/__pycache__/
+puntoenlace/__pycache__/
+reportes/__pycache__/
