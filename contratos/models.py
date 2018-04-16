@@ -8,4 +8,4 @@ class Contrato(models.Model):
     cliente=models.ForeignKey(Cliente,on_delete=models.CASCADE,related_name="clientes_contrato")
 
     def __str__(self):
-        return str(self.cliente)+" "+str(fecha_instalacion)
+        return str(self.cliente)+" "+str(self.fecha_instalacion)
