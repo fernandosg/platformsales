@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'cliente.apps.ClienteConfig',
     "contratos.apps.ContratosConfig",
     "reportes.apps.ReportesConfig",
-    "usuarios.apps.UsuariosConfig"
+    "usuarios.apps.UsuariosConfig",
+    "departamento.apps.DepartamentoConfig",
+    "edificio.apps.EdificioConfig"
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,4 @@ LOGIN_REDIRECT_URL=reverse_lazy("reportes:index_reporte")
 LOGOUT_REDIRECT_URL=reverse_lazy("login")
 
 STATICFILES_DIRS=(os.path.join(BASE_DIR, "static"),)
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))

@@ -16,7 +16,7 @@ class IndexView(TemplateView):
     def get_context_data(self,*args,**kwargs):
         template_for_user=""
         if self.request.user.has_perm("auth.management_permission"):
-            template_for_user="main\index_management.html"
+            template_for_user="main/index_management.html"
             clientes_deudores=self.get_clientes_deudores()
             return {"template_for_user":template_for_user,"contratos":clientes_deudores}
         else:

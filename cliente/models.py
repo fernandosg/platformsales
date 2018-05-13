@@ -1,12 +1,8 @@
 from django.db import models
 from puntoenlace.models import PuntoEnlace
+from departamento.models import Departamento
 from django.contrib.auth.models import User
 # Create your models here.
-class Departamento(models.Model):
-    nombre=models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.nombre
 
 class Cliente(models.Model):
     nombre=models.CharField(max_length=50)

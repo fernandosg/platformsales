@@ -27,5 +27,7 @@ urlpatterns = [
     path("puntoenlace/",include("puntoenlace.urls",namespace="puntoenlace")),
     path("contratos/",include("contratos.urls",namespace="contratos")),
     path("reportes/",include("reportes.urls",namespace="reportes")),
-    path("usuarios/",include("usuarios.urls",namespace="usuarios"))
+    path("usuarios/",include("usuarios.urls",namespace="usuarios")),
+    path("departamento/",include("departamento.urls",namespace="departamento")),
+    path("edificio/",include("edificio.urls",namespace="edificio"))
 ]
